@@ -1,0 +1,43 @@
+{
+  "name": "katalog-restoran-febe2",
+  "version": "1.0.0",
+  "description": "task 2",
+  "main": "index.js",
+  "scripts": {
+    "start-dev": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IrfandoAritonang/katalog-restoran-FEBE2.git"
+  },
+  "author": "irfando",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IrfandoAritonang/katalog-restoran-FEBE2/issues"
+  },
+  "homepage": "https://github.com/IrfandoAritonang/katalog-restoran-FEBE2#readme",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "babel-loader": "^8.2.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
+    "file-loader": "^6.2.0",
+    "idb": "^7.1.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}

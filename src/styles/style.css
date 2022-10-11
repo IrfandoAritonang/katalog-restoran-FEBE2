@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+ padding: 0;
+ margin: 0;
+}
+
+body {
+ font-family: 'Poppins', sans-serif;
+ background-color: white;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+}
+
+
+/*
+ AppBar
+*/
+
+.app-bar {
+ padding: 8px 16px;
+ background-color:  #583D72;
+ display: grid;
+ grid-template-columns: auto 1fr auto;
+ gap: 10px;
+ position: sticky;
+ top: 0;
+ z-index: 99;
+ box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+ display: flex;
+ align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+ background-color: transparent;
+ border: none;
+ font-size: 18px;
+ color: white;
+ padding: 8px;
+ cursor: pointer;
+}
+
+.app-bar .app-bar__brand {
+ display: flex;
+ align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+ color: white;
+ font-size: 16px;
+	font-weight: lighter;
+ user-select: none;
+}
+
+#aja {
+ font-weight: 700;
+ font-size: 30px;
+}
+
+
+.app-bar .app-bar__navigation {
+ position: absolute;
+ top: 50px;
+ left: -180px;
+ width: 150px;
+ transition: all 0.3s;
+ padding: 8px;
+ background-color:  #583D72;
+ overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+ left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+ display: inline-block;
+ text-decoration: none;
+ color: white;
+ padding: 8px;
+ margin-bottom: 5px;
+ width: 100%;
+}
+
+/*
+ Skip Content
+*/
+.skip-link {
+	position: absolute;
+	top: -100px;
+	left: 0;
+	background-color: #bf1722;
+	color: white;
+	padding: 10px;
+	font-size: 20px;
+	z-index: 100;
+	text-decoration: none
+}
+.skip-link:focus {
+	top: 100px
+}
+
+
+/*
+ Main Content
+*/
+
+main {
+ padding-left: 32px;
+	padding-right: 32px;
+ flex: 1;
+}
+
+.content {
+ margin: 0 auto;
+ min-height: 100%;
+}
+
+.content .content__heading {
+ font-weight: normal;
+	justify-content: center;
+}
+
+/*
+ Movies
+*/
+
+.movies {
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 16px;
+ margin: 32px 0;
+}
+
+/*
+ Movie Item
+*/
+
+.movie-item {
+ width: 100%;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ border-radius: 8px;
+ overflow: hidden;
+}
+
+.movie-item__header {
+ position: relative;
+}
+
+.movie-item .movie-item__header .movie-item__header__poster {
+ width: 100%;
+	height: 280px;
+}
+
+.movie-item .movie-item__header .movie-item__header__rating {
+ position: absolute;
+ padding: 8px;
+ bottom: 6px;
+ right: 0;
+	font-weight: bold;
+ display: inline-block;
+	border-radius: 5px 0px 0px 0px;
+ background-color: rgb(218, 218, 218);
+ color: #583D72;
+}
+
+.movie-item .movie-item__content .movie-item__content__city {
+	margin-left: 5px;
+	display: inline-block;
+	position:absolute;
+	padding: 0px;
+}
+
+.movie-item .movie-item__header .movie-item__header__rating .movie-item__header__rating__score {
+ margin-left: 5px;
+}
+
+.movie-item .movie-item__content {
+ padding: 16px;
+}
+
+.movie-item .movie-item__content h3 {
+ margin: 0 0 10px 0;
+}
+
+.movie-item .movie-item__content h3 a {
+ color: #db0000;
+ text-decoration: none;
+}
+
+.movie-item .movie-item__content p {
+ overflow: hidden;
+ text-overflow: ellipsis;
+ display: -webkit-box;
+ -webkit-line-clamp: 4; /* number of lines to show */
+ -webkit-box-orient: vertical;
+}
+
+/*
+ Movie
+*/
+
+.movie {
+ margin: 0 auto;
+ width: 100%;
+ max-width: 800px;
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 18px 16px;
+}
+
+.movie .movie__poster {
+ width: 100%;
+ max-height: 350px;
+	max-width: 650px;
+}
+
+.movie .movie__info h4 {
+ margin: 8px 0;
+	padding-top: 20px;
+}
+
+
+
+/*
+Like btn
+*/
+.like {
+	width: 55px;
+	height: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #db0000;
+	
+	position: fixed;
+	bottom: 16px;
+	right: 16px;
+	border-radius: 50%;
+	border: 0;
+	
+	font-size: 18px;
+	color: white;
+	cursor: pointer;
+}
+
+
+
+/*
+Detail
+*/
+.chips li{
+    display: inline-block;
+    padding: 0 25px;
+    margin: 16px 0 0 0;
+    height: 50px;
+    font-size: 14px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    transition: 0.3s;
+}
+.chips li:hover{
+    display: flexbox;
+    padding: 0 25px;
+    margin: 0px 0 0 0;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 50px;
+    border-radius: 25px;
+    color: #fff;
+    background-color: #583D72;
+}
+
+.review{
+    display: block;
+    padding: 0 25px;
+    margin: 16px 0 0 0;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+}
+
+.restaurant-menu, .user-review {
+	margin: 0 auto;
+ width: 100%;
+ max-width: 800px;
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 18px 16px;
+}
+
+.review{
+	display: block;
+	padding: 0 25px;
+	margin: 16px 0 0 0;
+	border-radius: 25px;
+	background-color: #f1f1f1;
+}
+
+
+.restaurant-text {
+	font-weight: lighter;
+	margin: 16px;
+}
+
+
+
+
+
+/*
+ Footer
+*/
+
+footer {
+ padding: 16px;
+}
+
+footer p {
+ text-align: center;
+ color: #aaaaaa;
+}
+
+footer p a {
+ color: #db0000;
+ text-decoration: none;
+}
+
